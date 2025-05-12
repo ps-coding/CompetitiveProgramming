@@ -5,4 +5,4 @@ I've already done a lot of problems, but I finally decided to start saving my so
 ## Structure
 
 - competition/
-  - `problem id`-`problem name`
+  - problem_id-problem_name
