@@ -1,11 +1,20 @@
 import sys
-import math
-import string
 import re
 
+
 def isValid(text):
-    exps = [r".*'; .* --.*", r".*\$\{.*\}.*", r".*\$\(.*\).*", r".*&& sudo.*", r".*&& su -.*", r".*;;.*", r".*%s.*", r".*%x.*", r".*%n.*"]
-    exps_case_ins = [".*' OR 1=1.*",  ".*<script.*"]
+    exps = [
+        r".*'; .* --.*",
+        r".*\$\{.*\}.*",
+        r".*\$\(.*\).*",
+        r".*&& sudo.*",
+        r".*&& su -.*",
+        r".*;;.*",
+        r".*%s.*",
+        r".*%x.*",
+        r".*%n.*",
+    ]
+    exps_case_ins = [".*' OR 1=1.*", ".*<script.*"]
 
     for exp in exps:
         if re.match(exp, text, flags=re.DOTALL) is not None:
